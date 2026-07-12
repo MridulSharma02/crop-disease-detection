@@ -13,6 +13,7 @@ interface HistoryDrawerProps {
 }
 
 const SEVERITY_CONFIG = {
+  None: { bg: 'bg-emerald-100', text: 'text-emerald-700', dot: 'bg-emerald-500' },
   Low: { bg: 'bg-emerald-100', text: 'text-emerald-700', dot: 'bg-emerald-500' },
   Medium: { bg: 'bg-amber-100', text: 'text-amber-700', dot: 'bg-amber-500' },
   High: { bg: 'bg-red-100', text: 'text-red-700', dot: 'bg-red-500' },

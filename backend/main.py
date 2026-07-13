@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+import os
 import json
 import io
 import time
@@ -32,8 +33,29 @@ class_labels = None
 async def load_model():
     global model, class_labels
     try:
-        model = tf.keras.models.load_model("model/best_model.keras")
-        with open("model/class_labels.json", "r") as f:
+        model_path = "model/best_model.keras"
+        labels_path = "model/class_labels.json"
+
+        # Download from Hugging Face if not present locally
+        if not os.path.exists(model_path):
+            logger.info("Downloading model from Hugging Face...")
+            import urllib.request
+            os.makedirs("model", exist_ok=True)
+            urllib.request.urlretrieve(
+                "https://huggingface.co/MridulSharma02/cropdoc-model/resolve/main/best_model_v2.keras",
+                model_path
+            )
+            logger.info("Model downloaded successfully")
+
+        if not os.path.exists(labels_path):
+            import urllib.request
+            urllib.request.urlretrieve(
+                "https://huggingface.co/MridulSharma02/cropdoc-model/resolve/main/class_labels.json",
+                labels_path
+            )
+
+        model = tf.keras.models.load_model(model_path)
+        with open(labels_path, "r") as f:
             class_labels = json.load(f)
         logger.info(f"Model loaded. Classes: {len(class_labels)}")
     except Exception as e:

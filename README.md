@@ -5,7 +5,7 @@
 ### AI-powered plant disease diagnosis for farmers & agronomists
 
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-22c55e?style=for-the-badge)](https://crop-disease-detection-ebon.vercel.app/)
-[![Backend API](https://img.shields.io/badge/⚡%20Backend%20API-Railway-7c3aed?style=for-the-badge)](https://crop-disease-detection-production-69ca.up.railway.app/health)
+[![Backend API](https://img.shields.io/badge/⚡%20Backend%20API-Render-46E3B7?style=for-the-badge)](https://crop-disease-detection-pj5r.onrender.com/health)
 [![GitHub](https://img.shields.io/badge/GitHub-MridulSharma02-181717?style=for-the-badge&logo=github)](https://github.com/MridulSharma02/crop-disease-detection)
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -13,7 +13,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black)
 
 ---
 
@@ -42,7 +42,7 @@ No agronomy knowledge needed. Just a photo.
 
 | 🌐 Frontend | ⚡ Backend API |
 |:-----------:|:--------------:|
-| [crop-disease-detection-ebon.vercel.app](https://crop-disease-detection-ebon.vercel.app/) | [Railway API](https://crop-disease-detection-production-69ca.up.railway.app/health) |
+| [crop-disease-detection-ebon.vercel.app](https://crop-disease-detection-ebon.vercel.app/) | [Render API](https://crop-disease-detection-pj5r.onrender.com/health) |
 
 ---
 
@@ -93,7 +93,7 @@ No agronomy knowledge needed. Just a photo.
 | Framework | FastAPI (Python) |
 | Image Processing | Pillow, NumPy |
 | Model Serving | TensorFlow SavedModel |
-| Deployment | Railway (Dockerized) |
+| Deployment | Render (Dockerized) |
 | Container | Docker (python:3.11-slim) |
 
 ### 🎨 Frontend
@@ -178,7 +178,6 @@ crop-disease-detection/
 │   │   ├── best_model_v2.keras   # Trained EfficientNet model
 │   │   └── class_labels.json     # 38 disease class mappings
 │   ├── Dockerfile           # Docker container config
-│   ├── railway.json         # Railway deployment config
 │   └── requirements.txt
 │
 ├── 🎨 frontend/
